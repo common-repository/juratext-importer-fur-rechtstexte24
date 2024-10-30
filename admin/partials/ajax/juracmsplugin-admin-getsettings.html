@@ -1,0 +1,59 @@
+<div class="form-manage">
+<form id="editKunde" method="post" onsubmit="setAction(this)">
+    <input type="hidden" name="editKunde">
+        <div class="flex-container">
+            <div class="flex-container-item">
+                <div class="settings-header">
+                    <h3><i class="fa fa-user-md fa-2x" aria-hidden="true"></i> Kundendaten editieren</h3>
+                </div>
+            </div>
+            <div class="flex-container-item">
+                <p>
+                    <label for="kundennummer">Kundennummer <i class="fa fa-plug" aria-hidden="true"></i></label>
+                    <span class="field">
+                        <input id="kundennummer" type="text" name="kundennummer" class="" value="">
+                    </span>
+                </p>
+                <p>
+                    <label for="pkey">Public-Key <i class="fa fa-key" aria-hidden="true"></i></label>
+                    <span class="field">
+                        <textarea id="pkey" form="editKunde" name="pkey" rows="10" cols="100"></textarea>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="flex-container-item">
+                <div class="settings-header">
+                    <h3><i class="fa fa-clock-o fa-2x" aria-hidden="true"></i> Aktualisierungen</h3>
+                </div>
+            </div>
+            <div class="flex-container-item">
+                <p>
+                    <label for="cronjob1">Stündlich</label>
+                    <input type="radio" id="cronjob1" name="cronjobber" value="stuendlich">
+                </p>
+                <p>
+                    <label for="cronjob1">Täglich</label>
+                    <input type="radio" id="cronjob2" name="cronjobber">
+                </p>
+                <p>
+                    <label>Aktuell:</label>
+                </p>
+                <p>
+                    <label>letzte Aktualisierung:</label>
+                </p>
+            </div>
+        </div>
+    <p>
+            <button onclick="this.form.submit()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Übernehmen</button>
+    </p>
+</form>
+</div>
+<script>
+    jQuery(document).ready(function () {
+        jQuery("#kundennummer").val(kunde.kndnr);
+        jQuery("#pkey").html(kunde.pubkey);
+        function setAction (form) {form.action = window.location.href;}
+    });
+</script>

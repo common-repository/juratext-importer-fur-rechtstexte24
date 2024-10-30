@@ -1,0 +1,36 @@
+@mixin mq($point) {
+
+  $old-mobile: "(max-width: 320px)";
+  $mobile: "(max-width: 415px)";
+  $tablet: "(max-width: 1024px)";
+  $small-screen: "(max-width: 1225px)";
+
+  @if $point == old-mobile {
+    @media #{$old-mobile} { @content; }
+  }
+  @else if $point == mobile {
+    @media #{$mobile} { @content; }
+  }
+  @else if $point == tablet {
+    @media #{$tablet}  { @content; }
+  }
+  @else if $point == small-screen {
+    @media #{$small-screen}  { @content; }
+  }
+
+}
+
+/*
+@include mq(small-screen) {
+
+}
+@include mq(tablet) {
+
+}
+@include mq(mobile) {
+
+}
+@include mq(old-mobile) {
+
+}
+*/

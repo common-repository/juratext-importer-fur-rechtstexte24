@@ -1,0 +1,78 @@
+.logo {
+  position: absolute;
+  display: block;
+  top: 10px;
+  left: 10px;
+  width: auto;
+  height: auto;
+
+  i {
+
+    @include mq(tablet) {
+      font-size: 3em !important;
+    }
+    @include mq(mobile) {
+      font-size: 2em !important;
+    }
+    @include mq(old-mobile) {
+      font-size: 1em !important;
+    }
+  }
+}
+
+.header {
+  margin: $container_alignment;
+  text-align: $text_alignment;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 900;
+    padding-top: 1em;
+    text-shadow: 0px 0px 1px rgba(0,0,0,.5);
+
+    @include mq(small-screen) {
+      font-size: 34px;
+    }
+    @include mq(tablet) {
+      font-size: 32px;
+      padding-top: .75em;
+    }
+    @include mq(mobile) {
+      font-size: 22px;
+    }
+    @include mq(old-mobile) {
+      font-size: 18px;
+      padding-top: .5em;
+    }
+  }
+
+  h2 {
+    padding-top: 1em;
+  }
+
+  .subtitle {
+    margin: 2em;
+  }
+}
+
+.settings {
+  position: absolute;
+  display: block;
+  width: auto;
+  height: auto;
+  top: 10px;
+  right: 10px;
+
+  i {
+
+    @include mq(tablet) {
+      font-size: 3em !important;
+    }
+    @include mq(mobile) {
+      font-size: 2em !important;
+    }
+    @include mq(old-mobile) {
+      font-size: 1em !important;
+    }
+  }
+}

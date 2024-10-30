@@ -1,0 +1,68 @@
+<h3>Ihre Leistungen</h3>
+<div class="table-front">
+    <table>
+        <thead>
+        <tr>
+            <th>Typ</th>
+            <th><i class="fa fa-check" aria-hidden="true"></i></th>
+            <th>Version</th>
+            <th>Shortcode</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>AGB</td>
+            <td class="setcolor"></td>
+            <td class="versioner"></td>
+            <td>[rechtstext typ="agb"]</td>
+        </tr>
+        <tr>
+            <td>Datenschutzerklärung</td>
+            <td class="setcolor"></td>
+            <td class="versioner"></td>
+            <td>[rechtstext typ="datenschutz"]</td>
+        </tr>
+        <tr>
+            <td>Widerrufsbelehrung</td>
+            <td class="setcolor"></td>
+            <td class="versioner"></td>
+            <td>[rechtstext typ="widerrufsbelehrung"]</td>
+        </tr>
+        <tr>
+            <td>Widerrufserklärung</td>
+            <td class="setcolor"></td>
+            <td class="versioner"></td>
+            <td>[rechtstext typ="widerrufserklaerung"]</td>
+        </tr>
+        <tr>
+            <td>Impressum</td>
+            <td class="setcolor"></td>
+            <td class="versioner"></td>
+            <td>[rechtstext typ="impressum"]</td>
+        </tr>
+        </tbody>
+        <thead>
+        <tr>
+            <th>Typ</th>
+            <th><i class="fa fa-check" aria-hidden="true"></i></th>
+            <th>Version</th>
+            <th>Shortcode</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+<script>
+    jQuery(document).ready(function () {
+        for (var i = 1; i < 6; i++) {
+            var color = jQuery(".setcolor").get(i-1), versioner = jQuery(".versioner").get(i-1);
+            if (jQuery.inArray(""+i+"", typen) !== -1) {
+                jQuery(color).addClass("gets");
+                jQuery(versioner).html(versionen[jQuery.inArray(""+i+"", typen)]);
+            } else {
+                jQuery(color).addClass("getsnot");
+                jQuery(versioner).html("");
+            }
+        }
+    });
+</script>

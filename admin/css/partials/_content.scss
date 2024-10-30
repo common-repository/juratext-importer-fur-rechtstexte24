@@ -1,0 +1,117 @@
+#content {
+  position: relative;
+  display: none;
+  width: 70%;
+  height: 100%;
+  margin: $container_alignment;
+  text-align: left;
+  vertical-align: top;
+
+  @include mq(mobile) {
+    width: 90%;
+    font-size: 12px;
+  }
+  @include mq(old-mobile) {
+    width: 95%;
+  }
+
+  .form-manage {
+    position: relative;
+    display: block;
+    text-align: $text_alignment;
+
+    form {
+
+      .flex-container {
+        width: 49%;
+        display: inline-flex;
+        display: -webkit-inline-flex;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        overflow: hidden;
+
+        @include mq(small-screen) {
+          width: 100%;
+          display: flex;
+          display: -webkit-flex;
+        }
+
+        .flex-container-item {
+          width: 100%;
+          overflow: hidden;
+          text-align: left;
+
+          .settings-header {
+            width: 100%;
+            text-align: left;
+            margin: 1em 0 2em 0;
+
+            @include mq(mobile) {
+              margin: .5em 0 1em 0;
+            }
+
+            h3 {
+              display: block;
+              width: 100%;
+              overflow: hidden;
+              vertical-align: middle;
+              text-align: left;
+
+              @include mq(small-screen) {
+                text-align: center;
+              }
+
+              @include mq(mobile) {
+                display: block;
+                width: 90%;
+                font-size: 18px;
+              }
+              @include mq(old-mobile) {
+                width: 95%;
+              }
+
+              i {
+                @include mq(mobile) {
+                  font-size: 1em !important;
+                }
+              }
+            }
+          }
+
+          p {
+            position: relative;
+            display: block;
+            width: 100%;
+
+            label {
+              text-align: left;
+            }
+
+            input[type="radio"] {
+              text-align: right;
+            }
+
+            .field {
+              position: relative;
+              display: block;
+              text-align: left;
+
+              input, textarea {
+                width: 50%;
+                min-width: 250px;
+              }
+
+              &.button {
+                margin-left: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

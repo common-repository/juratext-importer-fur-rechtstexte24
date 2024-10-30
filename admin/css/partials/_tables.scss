@@ -1,0 +1,58 @@
+.table-front {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 705px;
+  z-index: 10;
+
+  table {
+    text-align: center;
+    margin: $container_alignment;
+    width: auto;
+    min-width: 703px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    @include box-shadow(0px, 0px, 3px, -1px, rgba(0, 0, 0, .5));
+    @include border-radius(4px);
+    background: white;
+
+    thead {
+
+      th {
+        padding: .7em 0 .7em .3em;
+        background: #3b4650;
+        color: ghostwhite;
+        text-align: $text_alignment;
+      }
+    }
+
+    tbody {
+
+      tr {
+        display: table-row;
+        @include trans(.5s);
+
+        &:hover {
+          background: lightgrey;
+        }
+
+        td {
+          display: table-cell;
+          padding: 1.2em 0;
+
+          &:nth-child(2) {
+            padding: 0 1.2em;
+            width: 1.2em;
+            height: auto;
+            @include border-radius(10px);
+          }
+
+          &:nth-child(4) {
+            text-align: left;
+            padding-left: 1em;
+          }
+        }
+      }
+    }
+  }
+}

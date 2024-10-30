@@ -1,0 +1,54 @@
+.nav-container {
+  width: $width;
+  margin: $container_alignment;
+  text-align: $text_alignment;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 18px;
+      padding: .9em 5em;
+      @include trans(.2s);
+      @include box-shadow(0px,-2px,2px,-1px,rgba(0,0,0,0.45));
+      @include border-radius(2px);
+      background: rgba(237,232,232,1);
+      background: -moz-linear-gradient(top, rgba(237,232,232,1) 0%, rgba(240,240,240,0.75) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,232,232,1)), color-stop(100%, rgba(240,240,240,0.75)));
+      background: -webkit-linear-gradient(top, rgba(237,232,232,1) 0%, rgba(240,240,240,0.75) 100%);
+      background: -o-linear-gradient(top, rgba(237,232,232,1) 0%, rgba(240,240,240,0.75) 100%);
+      background: -ms-linear-gradient(top, rgba(237,232,232,1) 0%, rgba(240,240,240,0.75) 100%);
+      background: linear-gradient(to bottom, rgba(237,232,232,1) 0%, rgba(240,240,240,0.75) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ede8e8', endColorstr='#f0f0f0', GradientType=0 );
+
+      &.hovered {
+        color: darkred;
+        @include box-shadow(0px,-4px,5px,-1px,rgba(0,0,0,0.45));
+        cursor: pointer;
+      }
+
+      &.highlighted {
+        color: limegreen;
+        @include box-shadow(0px,-6px,7px,-2px,rgba(0,0,0,0.45));
+      }
+
+      @include mq(small-screen) {
+        font-size: 16px;
+      }
+      @include mq(tablet) {
+        font-size: 14px;
+      }
+      @include mq(mobile) {
+        padding: .7em 1.2em;
+      }
+      @include mq(old-mobile) {
+        font-size: 12px;
+        padding: .5em .8em;
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+aside {
+  position: relative;
+  display: inline-block;
+  max-width: 19%;
+  min-width: 235px;
+  height: 100%;
+  text-align: $text_alignment;
+  background: #fff;
+  @include box-shadow(0px,0px,2px,-1px,rgba(0,0,0,0.45));
+  vertical-align: top;
+  @include border-radius(3px);
+  overflow: hidden;
+  z-index: 5;
+  @include trans(.5s);
+
+  .sub-header {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #3b4650;
+
+    & > div {
+      position: relative;
+      display: inline-block;
+      width: 49%;
+    }
+
+    h3 {
+      padding: .5em 0;
+      margin: 0;
+      color: whitesmoke;
+      font-size: 14px;
+    }
+  }
+
+  .aside-logo {
+    position: relative;
+    display: block;
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    background: url("../../images/icons/logo.png") no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    overflow: hidden;
+  }
+
+  .description {
+    text-align: left;
+    padding: .3em .5em;
+
+    p {
+      font-size: 13px;
+    }
+
+    ul {
+      list-style: circle;
+
+      li {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .placeholder {
+    margin: 0 auto 2em auto;
+  }
+
+  .outputmessage {
+    color: black;
+  }
+
+  .error {
+    @extend .outputmessage;
+    color: red;
+  }
+
+  .success {
+    @extend .outputmessage;
+    color: green;
+  }
+}

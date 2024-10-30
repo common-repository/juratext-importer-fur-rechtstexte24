@@ -1,0 +1,40 @@
+button {
+  @include appearance();
+  @include border-radius(3px);
+  @include box-shadow(0px,0px,3px,-1px,rgba(0,0,0,.5));
+  padding: 5px;
+  background: whitesmoke;
+  color: #1a1a1a;
+  width: 200px;
+  border-style: none;
+  border-color: white;
+
+  &:active {
+    @include box-shadow(0px,0px,3px,-1px,rgba(0,0,0,.5), inset);
+  }
+}
+
+input[type="text"], textarea {
+  @include appearance();
+  @include border-radius(3px);
+  @include box-shadow(0px,0px,1px,-1px,rgba(0,0,0,.5));
+  padding: 8px !important;
+
+  &:focus {
+    @include box-shadow(0px,0px,4px,-1px,rgba(0,0,0,.5), inset);
+    border: none;
+    border-color: transparent;
+    outline: none;
+    padding: 12px;
+
+  }
+}
+
+p {
+  font-size: $font-standard;
+}
+
+li {
+  font-size: $font-li-standard;
+  list-style-position: inside;
+}
